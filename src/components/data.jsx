@@ -1,0 +1,42 @@
+export const salesData = {
+  labels: [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ],
+  datasets: [
+    {
+      label: "Monthly Sales",
+      data: [
+        50000, 30000, 60000, 70000, 15000, 20000, 45000, 19000, 78000, 45000,
+        29000, 68000,
+      ],
+      backgroundColor: [
+        "red",
+        "green",
+        "blue",
+        "yellow",
+        "pink",
+        "violet",
+        "turquoise",
+        "hotpink",
+        "indigo",
+        "grey",
+        "purple",
+        "magenta",
+      ],
+      borderColor: "black",
+      borderWidth: 2,
+      borderRadius: "50",
+    },
+  ],
+};
