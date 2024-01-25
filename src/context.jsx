@@ -10,8 +10,14 @@ const AppProvider = ({ children }) => {
     setcurrentPage(page);
   };
 
+  const changeTheme = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <AppContext.Provider value={{ darkMode, currentPage, changePage }}>
+    <AppContext.Provider
+      value={{ darkMode, currentPage, changePage, changeTheme }}
+    >
       {children}
     </AppContext.Provider>
   );

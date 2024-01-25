@@ -1,5 +1,14 @@
+import Header from "../header/Header";
+import styles from "../../css/container.module.css";
+import data from "../../data.json";
+
 const Container = () => {
-  return <div>Container</div>;
+  console.log(data);
+  return (
+    <div className={styles.main}>
+      <Header />
+    </div>
+  );
 };
 
-export default Container
+export default Container;
