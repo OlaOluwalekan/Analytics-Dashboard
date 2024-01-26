@@ -1,0 +1,57 @@
+.main {
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.main > article {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main > article > h3 {
+  font-size: 16px;
+  color: var(--greyBlack);
+}
+
+.main > article > button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--mintGreen);
+}
+
+.table-container {
+  overflow-x: scroll;
+}
+
+.order-list {
+  /* width: 100%; */
+  border-collapse: collapse;
+}
+
+.order-list th,
+.order-list td {
+  text-align: left;
+  padding: 10px; /* Adjust the padding as needed */
+  border-bottom: 2px solid #ddd; /* Optional: add a bottom border for separation */
+}
+
+.name-image {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 150px;
+}
+
+.name-image > img {
+  width: 20px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+
+.name-image > p {
+  font-size: 13px;
+}

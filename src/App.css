@@ -17,6 +17,12 @@
   --grey500: #737373;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 .container {
   display: flex;
+  width: 100vw;
+  /* overflow-x: hidden; */
 }

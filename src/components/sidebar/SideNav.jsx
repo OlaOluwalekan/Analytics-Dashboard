@@ -1,19 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MenuItem from "../MenuItem";
 import styles from "../../css/sidebar.module.css";
 import Theme from "./Theme";
 import { useGlobalcontext } from "../../context";
 
 const SideNav = () => {
-  const { darkMode } = useGlobalcontext();
+  const { darkMode, navIsOpen, toggleNav } = useGlobalcontext();
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  window.onresize = () => {
+    setScreenWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    if (screenWidth < 700 && navIsOpen) {
+      toggleNav();
+    }
+  }, [screenWidth]);
 
   return (
     <div
-      className={darkMode ? `${styles.main} ${styles.dark}` : `${styles.main}`}
+      className={`${styles.main} ${darkMode ? styles.dark : ""} ${
+        navIsOpen ? styles.open : ""
+      }`}
     >
       <div>
         {/* LOGO */}
-        <article className={styles.logo}>
+        <article
+          className={styles.logo}
+          onClick={() => {
+            if (screenWidth > 700) {
+              toggleNav();
+            }
+          }}
+        >
           <img src="./images/logo.svg" alt="logo" />
           <h3>Analytics</h3>
         </article>

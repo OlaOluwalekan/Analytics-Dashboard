@@ -1,12 +1,14 @@
 import Header from "../header/Header";
 import styles from "../../css/container.module.css";
-import data from "../../data.json";
+import Orders from "../orders/Orders";
 
 const Container = () => {
-  console.log(data);
   return (
     <div className={styles.main}>
       <Header />
+      <section>
+        <Orders />
+      </section>
     </div>
   );
 };

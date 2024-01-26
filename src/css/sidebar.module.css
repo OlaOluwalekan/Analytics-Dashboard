@@ -1,13 +1,19 @@
 .main {
   background-color: var(--lightGrey);
   height: 90vh;
+  width: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-right: 1px solid var(--grey);
 }
 
 .main.dark {
   background-color: var(--greyBlack);
+}
+
+.main.open {
+  width: 150px;
 }
 
 .main > div {
@@ -58,6 +64,14 @@
   text-transform: capitalize;
 }
 
+.menu_item.open > p {
+  display: block;
+}
+
+.menu_item.open {
+  justify-content: flex-start;
+}
+
 .theme {
   background-color: var(--white);
   display: flex;
@@ -68,6 +82,10 @@
   padding: 5px;
   border-radius: 30px;
   cursor: pointer;
+}
+
+.theme.open {
+  flex-direction: row;
 }
 
 .theme > article {
@@ -91,19 +109,7 @@
     justify-content: flex-start;
   }
 
-  .logo > h3 {
+  /* .logo > h3 {
     display: block;
-  }
-
-  .menu_item {
-    justify-content: flex-start;
-  }
-
-  .menu_item > p {
-    display: block;
-  }
-
-  .theme {
-    flex-direction: row;
-  }
+  } */
 }
